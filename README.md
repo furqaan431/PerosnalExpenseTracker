@@ -17,3 +17,30 @@ The Personal Expense Tracker is a Python application designed to help users mana
 - **Pandas**: Library for data manipulation and analysis.
 - **Matplotlib**: Library for creating visualizations of financial data.
 
+## Getting Started
+
+### Prerequisites
+Make sure you have the following installed:
+- Python 3.x
+- MySQL Server
+- Required Python libraries:
+
+### Database Setup
+1. Create a MySQL database named `ExpenseTracker`.
+2. Create two tables: `categories` and `transactions`.
+
+   ```sql
+   CREATE TABLE categories (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       category_name VARCHAR(100) NOT NULL
+   );
+
+   CREATE TABLE transactions (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       amount DECIMAL(10, 2) NOT NULL,
+       category_id INT,
+       date DATE NOT NULL,
+       description TEXT,
+       FOREIGN KEY (category_id) REFERENCES categories(id)
+   );
+
