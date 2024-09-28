@@ -5,8 +5,8 @@ from datetime import datetime
 # Connect to MySQL database
 conn = mysql.connector.connect(
     host="localhost",
-    user="root",  # Replace with your MySQL username
-    password="Furqaan@431",  # Replace with your MySQL password
+    user="",  # Replace with your MySQL username
+    password="",  # Replace with your MySQL password
     database="ExpenseTracker"
 )
 
